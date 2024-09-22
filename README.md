@@ -24,10 +24,11 @@ Projeto de gerenciador de tarefas simples, com as funcionalidades de criar, visu
    git clone https://github.com/miaeo/gerenciador-de-tarefas.git
    cd gerenciador-de-tarefas
 
-2. Instale as dependências no terminal
-npm install express mysql2 body-parser cors
+2. Instale as dependências no terminal:
+   ```bash
+   npm install express mysql2 body-parser cors
 
-3. Crie um banco de dados MySQL e execute:
+4. Crie um banco de dados MySQL:
    ```sql
    CREATE DATABASE tasklist;
    USE tasklist;
@@ -43,9 +44,9 @@ npm install express mysql2 body-parser cors
        status VARCHAR(50) DEFAULT 'To do'
    );
 
-4. Configure suas credenciais do banco de dados no arquivo server.js
+5. Configure suas credenciais do banco de dados no arquivo server.js;
 
-5. Inicie o servidor com:
+6. Inicie o servidor com:
    ```bash
    node server.js
 
