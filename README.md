@@ -50,5 +50,4 @@ Projeto de gerenciador de tarefas simples, com as funcionalidades de criar, visu
    ```bash
    node server.js
 
-
 A aplicação pode ser acessada em http://localhost:3000 após iniciar o servidor.
