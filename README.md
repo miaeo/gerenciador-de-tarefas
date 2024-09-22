@@ -10,6 +10,8 @@ Projeto de gerenciador de tarefas simples, com as funcionalidades de criar, visu
 - **Deleção de Tarefas:** remove tarefas do sistema;
 - **Dark Mode:** adicionado suporte para modo escuro, permitindo uma experiência de usuário mais confortável;
 
+> **Obs.:** O gráfico e os elementos visuais na página inicial são meramente decorativos e não estão integrados ao banco de dados.
+
 
 ## Instruções para execução local
 
