@@ -198,49 +198,6 @@ function formatDate(dateString) {
 
 
 
-// RENDERIZA UMA LINHA DE TAREFA NA TABELA
-function renderTask(task) {
-    const deadlineFormatted = formatDate(task.deadline);
-    
-    const taskRow = `
-        <tr>
-            <td>${task.title}</td>
-            <td><span class="priority-box ${task.priority.toLowerCase()}">${task.priority}</span></td>
-            <td>${task.project}</td>
-            <td><span class="status-box ${task.status.toLowerCase()}">${task.status}</span></td>
-            <td>${task.responsible}</td> <!-- Assumindo que 'responsible' seja uma propriedade da task -->
-            <td>${deadlineFormatted}</td> <!-- Data formatada -->
-            <td>
-                <i class='bx bx-edit edit-task'></i>
-                <i class='bx bx-show-alt view-task'></i>
-                <i class='bx bx-trash delete-task'></i>
-            </td>
-        </tr>
-    `;
-
-    document.getElementById('taskTableBody').innerHTML += taskRow;
-}
-
-
-
-// ATUALIZA A LINHA DA TAREFA DEPOIS DE UMA EDIÇÃO
-function updateTaskRow(row, updatedTask) {
-    row.cells[0].textContent = updatedTask.title;
-    row.cells[1].textContent = updatedTask.priority;
-    row.cells[2].textContent = updatedTask.project;
-    row.cells[4].textContent = updatedTask.responsible;
-
-    // FORMATA A DATA ANTES DE ATUALIZAR A CÉLULA
-    const deadlineDate = new Date(updatedTask.deadline);
-    if (!isNaN(deadlineDate)) {
-        row.cells[5].textContent = deadlineDate.toLocaleDateString('pt-BR');
-    } else {
-        row.cells[5].textContent = 'Data Inválida';
-    }
-}
-
-
-
 // LIDA COM A EDIÇÃO DE UMA TAREFA
 function handleEditTask(taskId) {
     const title = document.getElementById('editTaskTitle').value;
